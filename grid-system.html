@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System Examples</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Styling for demonstration purposes */
+        .demo-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+        .demo-box.highlight {
+            background-color: #e9ecef;
+        }
+        .section-title {
+            padding: 20px 0;
+            margin: 30px 0;
+            background-color: #212529;
+            color: white;
+            border-radius: 4px;
+        }
+        .container-demo {
+            background-color: rgba(0,123,255,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        /* Add colored borders for different container types */
+        .container { border: 2px solid #007bff; }
+        .container-fluid { border: 2px solid #28a745; }
+        .container-sm { border: 2px solid #dc3545; }
+        .container-lg { border: 2px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <!-- Regular Container Example -->
+    <div class="container container-demo">
+        <h2 class="text-center section-title">.container Example</h2>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="demo-box">
+                    <h4>Column 1</h4>
+                    <p>col-sm-6 col-md-4 col-lg-3</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="demo-box">
+                    <h4>Column 2</h4>
+                    <p>col-sm-6 col-md-4 col-lg-3</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="demo-box">
+                    <h4>Column 3</h4>
+                    <p>col-sm-6 col-md-4 col-lg-3</p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="demo-box">
+                    <h4>Column 4</h4>
+                    <p>col-sm-6 col-md-4 col-lg-3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fluid Container Example -->
+    <div class="container-fluid container-demo">
+        <h2 class="text-center section-title">.container-fluid Example</h2>
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <div class="demo-box highlight">
+                    <h4>Full Width</h4>
+                    <p>col-6 col-md-3</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="demo-box highlight">
+                    <h4>Full Width</h4>
+                    <p>col-6 col-md-3</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="demo-box highlight">
+                    <h4>Full Width</h4>
+                    <p>col-6 col-md-3</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="demo-box highlight">
+                    <h4>Full Width</h4>
+                    <p>col-6 col-md-3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Responsive Container Example -->
+    <div class="container-sm container-demo">
+        <h2 class="text-center section-title">.container-sm Example</h2>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+            <div class="col">
+                <div class="demo-box">Auto Columns</div>
+            </div>
+            <div class="col">
+                <div class="demo-box">Auto Columns</div>
+            </div>
+            <div class="col">
+                <div class="demo-box">Auto Columns</div>
+            </div>
+            <div class="col">
+                <div class="demo-box">Auto Columns</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mixed Column Sizes -->
+    <div class="container-lg container-demo">
+        <h2 class="text-center section-title">Mixed Columns Example</h2>
+        <div class="row">
+            <!-- Auto-sized column -->
+            <div class="col">
+                <div class="demo-box">
+                    <h4>Auto Width</h4>
+                    <p>col</p>
+                </div>
+            </div>
+            <!-- Fixed width column -->
+            <div class="col-6">
+                <div class="demo-box highlight">
+                    <h4>Fixed Width</h4>
+                    <p>col-6</p>
+                </div>
+            </div>
+            <!-- Auto-sized column -->
+            <div class="col">
+                <div class="demo-box">
+                    <h4>Auto Width</h4>
+                    <p>col</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nested Columns -->
+        <div class="row mt-4">
+            <div class="col-sm-9">
+                <div class="demo-box">
+                    <h4>Nested Grid</h4>
+                    <div class="row">
+                        <div class="col-8 col-sm-6">
+                            <div class="demo-box highlight">Nested col-8 col-sm-6</div>
+                        </div>
+                        <div class="col-4 col-sm-6">
+                            <div class="demo-box highlight">Nested col-4 col-sm-6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="demo-box">
+                    <h4>Sidebar</h4>
+                    <p>col-sm-3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breakpoint Indicator -->
+    <div class="position-fixed bottom-0 end-0 p-3 bg-dark text-white rounded-start">
+        <div class="d-block d-sm-none">Extra Small (xs) <576px</div>
+        <div class="d-none d-sm-block d-md-none">Small (sm) ≥576px</div>
+        <div class="d-none d-md-block d-lg-none">Medium (md) ≥768px</div>
+        <div class="d-none d-lg-block d-xl-none">Large (lg) ≥992px</div>
+        <div class="d-none d-xl-block">Extra Large (xl) ≥1200px</div>
+    </div>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

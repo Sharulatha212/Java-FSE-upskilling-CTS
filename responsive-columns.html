@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Responsive Columns</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for demonstration */
+        .demo-col {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .demo-col:hover {
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease;
+        }
+        /* Add some spacing for better visualization */
+        .container {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+        /* Add responsive text sizes */
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Responsive Column Layout</h1>
+        <p class="text-center mb-5 text-muted">
+            Resize the browser window to see how columns respond:
+            <br>
+            Mobile: 1 column | Tablet: 2 columns | Desktop: 3 columns
+        </p>
+
+        <!-- First Row -->
+        <div class="row">
+            <!-- Column 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">
+                    <h3>Column 1</h3>
+                    <p>This column will:</p>
+                    <ul class="list-unstyled">
+                        <li>Take full width on mobile</li>
+                        <li>Take half width on tablet</li>
+                        <li>Take one-third width on desktop</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">
+                    <h3>Column 2</h3>
+                    <p>This column will:</p>
+                    <ul class="list-unstyled">
+                        <li>Stack below on mobile</li>
+                        <li>Move right on tablet</li>
+                        <li>Stay in middle on desktop</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="demo-col">
+                    <h3>Column 3</h3>
+                    <p>This column will:</p>
+                    <ul class="list-unstyled">
+                        <li>Stack at bottom on mobile</li>
+                        <li>Start new row on tablet</li>
+                        <li>Complete row on desktop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breakpoint Indicator -->
+        <div class="position-fixed bottom-0 end-0 p-3 bg-dark text-white rounded-start">
+            <div class="d-block d-sm-none">Extra Small (xs) - Mobile</div>
+            <div class="d-none d-sm-block d-md-none">Small (sm)</div>
+            <div class="d-none d-md-block d-lg-none">Medium (md) - Tablet</div>
+            <div class="d-none d-lg-block d-xl-none">Large (lg) - Desktop</div>
+            <div class="d-none d-xl-block">Extra Large (xl)</div>
+        </div>
+    </div>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

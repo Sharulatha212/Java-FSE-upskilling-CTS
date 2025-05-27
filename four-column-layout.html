@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four-Column Layout</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        .column {
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            height: 100%;
+            transition: transform 0.2s;
+            border: 1px solid #dee2e6;
+        }
+
+        .content-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        /* Breakpoint indicator */
+        .breakpoint-indicator {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background-color: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            z-index: 1000;
+        }
+
+        /* Add some visual distinction between columns */
+        .column:nth-child(1) .content-box { border-left: 4px solid #007bff; }
+        .column:nth-child(2) .content-box { border-left: 4px solid #28a745; }
+        .column:nth-child(3) .content-box { border-left: 4px solid #dc3545; }
+        .column:nth-child(4) .content-box { border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Four-Column Layout</h1>
+            <p class="lead mb-0">Responsive grid with equal-width columns</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- First Row - Basic Columns -->
+        <section class="mb-5">
+            <h2 class="mb-4">Basic Four-Column Layout</h2>
+            <div class="row">
+                <div class="col-sm-3 column">
+                    <div class="content-box">
+                        <h3>Column 1</h3>
+                        <p>This column takes up 3 units (25%) of the 12-unit grid on small screens and larger.</p>
+                        <button class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box">
+                        <h3>Column 2</h3>
+                        <p>On mobile devices (below 576px), columns will stack vertically.</p>
+                        <button class="btn btn-success">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box">
+                        <h3>Column 3</h3>
+                        <p>Each column is equal width using the col-sm-3 class.</p>
+                        <button class="btn btn-danger">Learn More</button>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box">
+                        <h3>Column 4</h3>
+                        <p>Hover over these boxes to see the interactive effect.</p>
+                        <button class="btn btn-warning">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Second Row - Card Style -->
+        <section class="mb-5">
+            <h2 class="mb-4">Card-Style Layout</h2>
+            <div class="row">
+                <div class="col-sm-3 column">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 1</h5>
+                            <p class="card-text">Some quick example text to build on the card title.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 2</h5>
+                            <p class="card-text">Another feature description goes here.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 3</h5>
+                            <p class="card-text">A third feature description for this card.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Placeholder">
+                        <div class="card-body">
+                            <h5 class="card-title">Feature 4</h5>
+                            <p class="card-text">The fourth feature description goes here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Third Row - Icon Features -->
+        <section>
+            <h2 class="mb-4">Icon Features</h2>
+            <div class="row">
+                <div class="col-sm-3 column">
+                    <div class="content-box text-center">
+                        <div class="display-4 mb-3">🚀</div>
+                        <h4>Fast</h4>
+                        <p>Lightning quick performance</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box text-center">
+                        <div class="display-4 mb-3">🛡️</div>
+                        <h4>Secure</h4>
+                        <p>Enterprise-grade security</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box text-center">
+                        <div class="display-4 mb-3">📱</div>
+                        <h4>Responsive</h4>
+                        <p>Works on all devices</p>
+                    </div>
+                </div>
+                <div class="col-sm-3 column">
+                    <div class="content-box text-center">
+                        <div class="display-4 mb-3">⚡</div>
+                        <h4>Powerful</h4>
+                        <p>Advanced capabilities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Breakpoint Indicator -->
+    <div class="breakpoint-indicator">
+        <div class="d-block d-sm-none">Extra Small (xs) <576px</div>
+        <div class="d-none d-sm-block d-md-none">Small (sm) ≥576px</div>
+        <div class="d-none d-md-block d-lg-none">Medium (md) ≥768px</div>
+        <div class="d-none d-lg-block d-xl-none">Large (lg) ≥992px</div>
+        <div class="d-none d-xl-block">Extra Large (xl) ≥1200px</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <p class="text-center text-muted mb-0">© 2024 Four-Column Layout Example</p>
+        </div>
+    </footer>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

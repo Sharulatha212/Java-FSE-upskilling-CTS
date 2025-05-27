@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Navbar & Cards</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom navbar styling */
+        .custom-navbar {
+            background-color: #343a40;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .custom-navbar .nav-link {
+            color: rgba(255,255,255,0.8);
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .custom-navbar .nav-link:hover,
+        .custom-navbar .nav-link.active {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Mobile nav styling */
+        @media (max-width: 767.98px) {
+            .custom-navbar .nav-link {
+                text-align: center;
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Card styling */
+        .feature-card {
+            border: none;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            transition: transform 0.2s;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        /* Brand logo styling */
+        .brand-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .brand-logo:hover {
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* User profile section */
+        .user-profile {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .user-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Navbar -->
+    <nav class="custom-navbar">
+        <div class="container">
+            <!-- Navbar content with d-flex -->
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <!-- Brand -->
+                <a href="#" class="brand-logo mb-3 mb-md-0">FlexDemo</a>
+
+                <!-- Navigation Links -->
+                <div class="d-flex flex-column flex-md-row">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#" class="nav-link">About</a>
+                </div>
+
+                <!-- User Profile -->
+                <div class="user-profile mt-3 mt-md-0">
+                    <img src="https://via.placeholder.com/32" alt="User" class="user-avatar">
+                    <span>John Doe</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Stats Cards Row -->
+        <div class="row mb-5">
+            <div class="col-md-3">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="stat-number">2.4K</div>
+                        <div class="text-muted">Users</div>
+                    </div>
+                    <div class="display-4">👥</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="stat-number">8.5K</div>
+                        <div class="text-muted">Downloads</div>
+                    </div>
+                    <div class="display-4">⬇️</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="stat-number">95%</div>
+                        <div class="text-muted">Satisfaction</div>
+                    </div>
+                    <div class="display-4">⭐</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="stat-card d-flex justify-content-between align-items-center">
+                    <div>
+                        <div class="stat-number">24/7</div>
+                        <div class="text-muted">Support</div>
+                    </div>
+                    <div class="display-4">🎯</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feature Cards -->
+        <h2 class="mb-4">Featured Content</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Responsive Design</h5>
+                            <p class="card-text">Create beautiful, responsive layouts that work on any device.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button class="btn btn-primary">Learn More</button>
+                            <span class="badge bg-success">New</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Flex Utilities</h5>
+                            <p class="card-text">Powerful flexbox utilities for advanced layouts and alignment.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button class="btn btn-primary">Learn More</button>
+                            <span class="badge bg-info">Popular</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card feature-card">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Feature">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Custom Components</h5>
+                            <p class="card-text">Build your own components using Bootstrap's utility classes.</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <button class="btn btn-primary">Learn More</button>
+                            <span class="badge bg-warning">Featured</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Cards with Different Alignments -->
+        <h2 class="my-4">Content Cards</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body d-flex align-items-start justify-content-between">
+                        <div>
+                            <h5 class="card-title">Left Aligned</h5>
+                            <p class="card-text">Content aligned to the start of the container.</p>
+                        </div>
+                        <button class="btn btn-outline-primary">Action</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body d-flex align-items-center justify-content-between">
+                        <div>
+                            <h5 class="card-title">Center Aligned</h5>
+                            <p class="card-text">Content vertically centered.</p>
+                        </div>
+                        <button class="btn btn-outline-success">Action</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">© 2024 FlexDemo. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-muted text-decoration-none">Privacy</a>
+                    <a href="#" class="text-muted text-decoration-none">Terms</a>
+                    <a href="#" class="text-muted text-decoration-none">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

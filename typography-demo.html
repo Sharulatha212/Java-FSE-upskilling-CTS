@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Typography</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom styling */
+        .demo-section {
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .demo-box {
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+
+        .code-example {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            color: #dc3545;
+            font-size: 0.875rem;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .header {
+            background: linear-gradient(45deg, #007bff, #6610f2);
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header mb-5">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Bootstrap Typography</h1>
+            <p class="lead mb-0">A comprehensive guide to Bootstrap's typography utilities and text transformations.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Display Headings -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Display Headings</h2>
+            <div class="demo-box">
+                <h1 class="display-1">Display 1</h1>
+                <h1 class="display-2">Display 2</h1>
+                <h1 class="display-3">Display 3</h1>
+                <h1 class="display-4">Display 4</h1>
+                <h1 class="display-5">Display 5</h1>
+                <h1 class="display-6">Display 6</h1>
+            </div>
+            <div class="mt-3">
+                <small class="text-muted">Usage example: <span class="code-example">class="display-1"</span></small>
+            </div>
+        </section>
+
+        <!-- Font Weight & Italics -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Font Weight & Style</h2>
+            <div class="demo-box">
+                <p class="fw-bold">Bold text with fw-bold</p>
+                <p class="fw-bolder">Bolder weight with fw-bolder</p>
+                <p class="fw-normal">Normal weight with fw-normal</p>
+                <p class="fw-light">Light weight with fw-light</p>
+                <p class="fst-italic">Italic text with fst-italic</p>
+                <p class="fst-normal">Normal font style with fst-normal</p>
+            </div>
+        </section>
+
+        <!-- Text Transform -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Text Transformation</h2>
+            <div class="demo-box">
+                <p class="text-uppercase">uppercase text with text-uppercase</p>
+                <p class="text-lowercase">LOWERCASE TEXT with text-lowercase</p>
+                <p class="text-capitalize">capitalized text with text-capitalize</p>
+            </div>
+        </section>
+
+        <!-- Lead & Emphasis -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Lead Text & Emphasis</h2>
+            <div class="demo-box">
+                <p class="lead">
+                    This is a lead paragraph. Use it to draw attention to important introductory content.
+                    The lead class makes the text stand out.
+                </p>
+                <p class="text-muted">
+                    This is muted text using text-muted. Perfect for secondary content.
+                </p>
+                <p>
+                    Regular paragraph with <mark>highlighted text using mark</mark> and 
+                    <small>smaller text using small</small>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Text Alignment -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Text Alignment</h2>
+            <div class="demo-box">
+                <p class="text-start">Left aligned text with text-start</p>
+                <p class="text-center">Center aligned text with text-center</p>
+                <p class="text-end">Right aligned text with text-end</p>
+            </div>
+        </section>
+
+        <!-- Text Colors -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Text Colors</h2>
+            <div class="demo-box">
+                <p class="text-primary">Primary text with text-primary</p>
+                <p class="text-secondary">Secondary text with text-secondary</p>
+                <p class="text-success">Success text with text-success</p>
+                <p class="text-danger">Danger text with text-danger</p>
+                <p class="text-warning">Warning text with text-warning</p>
+                <p class="text-info">Info text with text-info</p>
+            </div>
+        </section>
+
+        <!-- Blockquotes -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Blockquotes</h2>
+            <div class="demo-box">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>A well-known quote, contained in a blockquote element.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                        Someone famous in <cite title="Source Title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- Inline Text Elements -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">Inline Text Elements</h2>
+            <div class="demo-box">
+                <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+                <p><del>This line of text is meant to be treated as deleted text.</del></p>
+                <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+                <p><u>This line of text will render as underlined.</u></p>
+                <p><small>This line of text is meant to be treated as fine print.</small></p>
+                <p><strong>This line rendered as bold text.</strong></p>
+                <p><em>This line rendered as italicized text.</em></p>
+            </div>
+        </section>
+
+        <!-- Lists -->
+        <section class="demo-section">
+            <h2 class="border-bottom pb-2 mb-4">List Styles</h2>
+            <div class="demo-box">
+                <ul class="list-unstyled">
+                    <li>This is a list without bullets</li>
+                    <li>Using the list-unstyled class</li>
+                    <li>Perfect for custom styling</li>
+                </ul>
+
+                <ul class="list-inline">
+                    <li class="list-inline-item">Inline list item</li>
+                    <li class="list-inline-item">Using list-inline</li>
+                    <li class="list-inline-item">And list-inline-item</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-4">
+        <div class="container">
+            <div class="text-center text-muted">
+                <p class="mb-0">Created to demonstrate Bootstrap's typography utilities</p>
+                <small>Using Bootstrap's built-in classes for text styling and formatting</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

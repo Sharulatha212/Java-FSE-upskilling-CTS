@@ -1,0 +1,337 @@
+/* Header styles */
+h2 {
+  color: #2a52be; /* Blue shade */
+  text-transform: uppercase;
+}
+
+/* Paragraph styles */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+.cta-button {
+    background-color: #007BFF; 
+    color: white;              
+    padding: 12px 24px;        
+    border: none;              
+    border-radius: 5px;        
+    font-size: 16px;           
+    cursor: pointer;          
+    transition: background-color 0.3s ease; 
+} 
+.cta-button:hover {
+    background-color: #0056b3; 
+}
+
+nav {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 20px;    
+} /* <-- Added missing closing brace */
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+/* Universal selector to reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Element selector to style all <h2> elements */
+h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* ID selector for the main header/banner */
+#mainHeader {
+  background-color: #4CAF50;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Class selector for event containers */
+.eventCard {
+  background-color: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Grouping selector for <h3> and <p> elements */
+h3, p {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Apply a background image with a fallback color to the body */
+body {
+  background-color: #f0f0f0; /* fallback */
+  background-image: url('city-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #333; /* fallback text color */
+  font-family: Arial, sans-serif;
+}
+
+/* Use HEX for text color */
+h2 {
+  color: #2c3e50; /* dark blue-gray */
+}
+
+/* Use RGBA for background with transparency */
+.eventCard {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Apply a linear gradient to section headers */
+h3 {
+  background: linear-gradient(to right, #9377e6, #787ae1); /* warm gradient */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+/* Importing fonts using @import (optional alternative) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:ital@1&display=swap'); */
+
+/* Base body text */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+/* Header style */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Descriptions (e.g. inside <p> or custom classes) */
+.description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #555;
+}
+/* Remove bullets and style nav menu */
+nav ul {
+  list-style-type: none;         /* Removes bullets */
+  list-style-position: inside;   /* Keeps spacing tidy */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+/* Nav list items spacing */
+nav ul li {
+  padding: 10px;
+  margin: 0 5px;
+}
+
+/* General UL styling outside nav */
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+  padding-left: 20px;
+  margin-bottom: 1em;
+}
+/* General link styles */
+a:link {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #5a5a5a;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #fbfafa;
+}
+/* Table Styling */
+.events-table {
+  width: 100%;
+  border-collapse: collapse; /* Remove double borders */
+  margin: 20px 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Table Header and Data Cell Styles */
+.events-table th,
+.events-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  background-color: #f9f9f9;
+}
+
+/* Table Header Styling */
+.events-table thead th {
+  background-color: #007BFF;
+  color: white;
+}
+
+/* Zebra Striping */
+.events-table tbody tr:nth-child(even) {
+  background-color: #e6f0ff;
+}
+/* Box Model for Event Card */
+.eventCard {
+  border: 2px solid #007BFF; /* Solid blue border */
+  padding: 20px;              /* Space inside the box */
+  margin: 30px auto;          /* Space outside the box */
+  width: 80%;
+  background-color: #f4f9ff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Outline for highlighted form input */
+.highlight {
+  outline: 2px solid #f8f7f5; /* Orange outline for focus */
+}
+
+/* Visibility vs Display */
+.hidden-example {
+  visibility: hidden; /* Takes up space, but not visible */
+}
+
+.none-example {
+  display: none; /* Completely removed from layout */
+}
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2vw;
+}
+
+/* Responsive Image */
+.responsive-img {
+  width: 100%;
+  max-height: 40vh;
+  object-fit: cover;
+}
+#eventBanner {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center;     /* center vertically */
+  width: 100%;             /* full width */
+  height: 500px;           /* height you want for visibility */
+  background-color: #f0f0f0; /* optional: a light background */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* subtle shadow */
+  margin: 20px 0;          /* spacing above and below */
+  overflow: hidden;        /* hide anything overflow */
+}
+
+#eventBanner img {
+  max-height: 400%;
+  max-width: 100%;
+  object-fit: contain;  /* keep aspect ratio */
+}
+
+/* Hero Section */
+.hero h1 {
+  font-size: 3vw;
+  text-align: center;
+  margin: 20px;
+}
+
+/* MEDIA QUERY for devices < 768px */
+@media screen and (max-width: 768px) {
+  /* Stack nav links vertically */
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Reduce font size */
+  .nav-links li a {
+    font-size: 4vw;
+  }
+
+  .hero h1 {
+    font-size: 6vw;
+  }
+
+  /* Scale images down */
+  .responsive-img {
+    max-height: 25vh;
+  }
+}
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.eventCard {
+  flex: 1 1 45%; /* 2 cards per row, shrink/grow allowed */
+  padding: 20px;
+  border: 1px solid #ccc;
+}

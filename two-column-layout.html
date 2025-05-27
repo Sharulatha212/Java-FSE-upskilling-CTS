@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Column Layout with Sidebar</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        .sidebar {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            height: 100%;
+        }
+        
+        .sidebar .nav-link {
+            color: #495057;
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+
+        .content-area {
+            padding: 20px;
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        @media (max-width: 767.98px) {
+            .sidebar {
+                margin-bottom: 20px;
+            }
+            .sticky-sidebar {
+                position: static;
+            }
+        }
+
+        .card {
+            margin-bottom: 20px;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        /* Header styling */
+        .site-header {
+            background-color: #343a40;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .site-header h1 {
+            color: white;
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Two-Column Layout</h1>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3">
+                <div class="sidebar sticky-sidebar">
+                    <h5 class="mb-3">Navigation</h5>
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#home">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                        <a class="nav-link" href="#about">
+                            <i class="bi bi-info-circle"></i> About
+                        </a>
+                        <a class="nav-link" href="#services">
+                            <i class="bi bi-gear"></i> Services
+                        </a>
+                        <a class="nav-link" href="#contact">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </nav>
+
+                    <!-- Quick Links -->
+                    <h5 class="mt-4 mb-3">Quick Links</h5>
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action">Documentation</a>
+                        <a href="#" class="list-group-item list-group-item-action">Resources</a>
+                        <a href="#" class="list-group-item list-group-item-action">Help Center</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9">
+                <div class="content-area">
+                    <!-- Welcome Section -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">Welcome to Our Site</h2>
+                            <p class="card-text lead">This is a responsive two-column layout built with Bootstrap 5.</p>
+                            <p>The sidebar will stack above the content on mobile devices (below 768px) and appear on the left side on larger screens.</p>
+                        </div>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="row mt-4">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Responsive Design</h5>
+                                    <p class="card-text">Automatically adapts to different screen sizes and devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sticky Sidebar</h5>
+                                    <p class="card-text">Sidebar stays in view while scrolling on desktop devices.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <div class="mt-4">
+                        <h3>Main Content</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                        
+                        <div class="alert alert-info mt-3">
+                            <strong>Pro Tip:</strong> The sidebar will stick to the top while scrolling on desktop devices.
+                        </div>
+
+                        <!-- Additional Content for Scrolling -->
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <h4>Additional Information</h4>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 py-3">
+        <div class="container">
+            <p class="text-center text-muted mb-0">© 2024 Two-Column Layout Example</p>
+        </div>
+    </footer>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

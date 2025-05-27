@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Button Showcase</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 2rem;
+        }
+
+        .demo-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: #212529;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .button-grid .btn {
+            width: 100%;
+        }
+
+        .demo-box {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .code-example {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            color: #dc3545;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Standard Buttons -->
+        <section class="demo-section">
+            <h2 class="section-title">Standard Buttons</h2>
+            <div class="button-grid">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+                <button type="button" class="btn btn-link">Link</button>
+            </div>
+        </section>
+
+        <!-- Outline Buttons -->
+        <section class="demo-section">
+            <h2 class="section-title">Outline Buttons</h2>
+            <div class="button-grid">
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <button type="button" class="btn btn-outline-success">Success</button>
+                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-warning">Warning</button>
+                <button type="button" class="btn btn-outline-info">Info</button>
+                <button type="button" class="btn btn-outline-light">Light</button>
+                <button type="button" class="btn btn-outline-dark">Dark</button>
+            </div>
+        </section>
+
+        <!-- Button Sizes -->
+        <section class="demo-section">
+            <h2 class="section-title">Button Sizes</h2>
+            <div class="demo-box">
+                <div class="d-flex gap-2 align-items-center mb-3">
+                    <button type="button" class="btn btn-primary btn-lg">Large Button</button>
+                    <button type="button" class="btn btn-secondary btn-lg">Large Button</button>
+                </div>
+                <div class="d-flex gap-2 align-items-center mb-3">
+                    <button type="button" class="btn btn-primary">Default Button</button>
+                    <button type="button" class="btn btn-secondary">Default Button</button>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                    <button type="button" class="btn btn-primary btn-sm">Small Button</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Small Button</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button States -->
+        <section class="demo-section">
+            <h2 class="section-title">Button States</h2>
+            <div class="demo-box">
+                <div class="d-flex gap-2 flex-wrap">
+                    <button type="button" class="btn btn-primary active">Active</button>
+                    <button type="button" class="btn btn-primary" disabled>Disabled</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="button">Toggle</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Groups -->
+        <section class="demo-section">
+            <h2 class="section-title">Button Groups</h2>
+            
+            <!-- Basic Button Group -->
+            <div class="demo-box">
+                <h5 class="mb-3">Basic Button Group</h5>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-primary">Left</button>
+                    <button type="button" class="btn btn-primary">Middle</button>
+                    <button type="button" class="btn btn-primary">Right</button>
+                </div>
+            </div>
+
+            <!-- Mixed Styles -->
+            <div class="demo-box">
+                <h5 class="mb-3">Mixed Styles</h5>
+                <div class="btn-group" role="group" aria-label="Mixed styles">
+                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-warning">Edit</button>
+                    <button type="button" class="btn btn-success">Save</button>
+                </div>
+            </div>
+
+            <!-- Outlined Group -->
+            <div class="demo-box">
+                <h5 class="mb-3">Outlined Group</h5>
+                <div class="btn-group" role="group" aria-label="Outlined example">
+                    <button type="button" class="btn btn-outline-primary">Left</button>
+                    <button type="button" class="btn btn-outline-primary">Middle</button>
+                    <button type="button" class="btn btn-outline-primary">Right</button>
+                </div>
+            </div>
+
+            <!-- Checkbox Buttons -->
+            <div class="demo-box">
+                <h5 class="mb-3">Checkbox Buttons</h5>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck1">Checkbox 1</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck2">Checkbox 2</label>
+
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck3">Checkbox 3</label>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="demo-box">
+                <h5 class="mb-3">Radio Buttons</h5>
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-secondary" for="btnradio1">Radio 1</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btnradio2">Radio 2</label>
+
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-secondary" for="btnradio3">Radio 3</label>
+                </div>
+            </div>
+
+            <!-- Vertical Button Group -->
+            <div class="demo-box">
+                <h5 class="mb-3">Vertical Button Group</h5>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                    <button type="button" class="btn btn-primary">Button 1</button>
+                    <button type="button" class="btn btn-primary">Button 2</button>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Item 1</a></li>
+                            <li><a class="dropdown-item" href="#">Item 2</a></li>
+                            <li><a class="dropdown-item" href="#">Item 3</a></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-primary">Button 4</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Button Toolbar -->
+        <section class="demo-section">
+            <h2 class="section-title">Button Toolbar</h2>
+            <div class="demo-box">
+                <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group me-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-outline-secondary">1</button>
+                        <button type="button" class="btn btn-outline-secondary">2</button>
+                        <button type="button" class="btn btn-outline-secondary">3</button>
+                        <button type="button" class="btn btn-outline-secondary">4</button>
+                    </div>
+                    <div class="btn-group me-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-outline-success">5</button>
+                        <button type="button" class="btn btn-outline-success">6</button>
+                        <button type="button" class="btn btn-outline-success">7</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-outline-info">8</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Local Bootstrap JavaScript Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
